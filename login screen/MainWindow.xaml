@@ -1,0 +1,188 @@
+﻿<Window x:Class="login_screen.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:login_screen"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True"
+        Background="Transparent"
+        MouseDown="Window_MouseDown"
+        Title="MainWindow" Height="750" Width="968" Icon="/tải xuống.png">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="1.6*" />
+        </Grid.ColumnDefinitions>
+        <Border CornerRadius="10 0 0 10" Margin="0,0,0,48">
+            <Border.Background>
+                <ImageBrush ImageSource="/Untitled.png"/>
+            </Border.Background>
+
+        </Border>
+        <Border CornerRadius=" 0 10 10 0" Background="#FFFFFF" Margin="372,0,0,48" Grid.ColumnSpan="2">
+            <Grid OpacityMask="#FFFA0000" Margin="0,0,0,-86">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="1000"/>
+                </Grid.RowDefinitions>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition Width="25"/>
+                        <ColumnDefinition Width="25" />
+
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="btnMinisize"
+                            BorderThickness="0"
+                            Content="-"
+                            Foreground="Black"
+                            FontSize="20"
+                            FontFamily="Montserrat"
+                            Grid.Column="1"
+                            
+                            Cursor="Hand"
+                            Click="btnMinisize_Click"
+                            
+                        >
+
+
+                    </Button>
+                    <Button x:Name="btnDelete"
+                            Background="Transparent"
+                            BorderThickness="0"
+                            
+                            Content="x"
+                            Foreground="Black"
+                            FontSize="20"
+                            FontFamily="Montserrat"
+                            Grid.Column="2"
+                            
+                            Cursor="Hand"
+                            Click="btnDelete_Click" Height="30" VerticalAlignment="Top" OpacityMask="Red" BorderBrush="Red"
+                           
+                        >
+                        <Button.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="0 7 0 0"/>
+                            </Style>
+                        </Button.Resources>
+
+                    </Button>
+
+
+
+                    <StackPanel Width="auto" Margin="5,40,0,-724" Grid.ColumnSpan="3">
+                        <Border Height="147" Width="154" Margin="10, 15,0,0" CornerRadius="10,10,10,10" >
+                            <Border.Background>
+                                <ImageBrush ImageSource="/images.jpeg"/>
+                            </Border.Background>
+
+
+                        </Border>
+                        <TextBlock Margin="10,25,0,0" Height="31" Text="Hello!Welcome back" FontSize="30" TextAlignment="Center" FontFamily="Bahnschrift" Foreground="#FF2F1C6A" Width="586"/>
+                        <TextBlock Height="30" Margin="50,10,50,0" Text="Email"   FontSize="22" FontFamily="Bahnschrift" Foreground="Black"/>
+                        <Border Margin="50,0,50,0" Height="50" Background="#FFCCC9C9" CornerRadius="5,5,5,5" >
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="26*" />
+                                    <ColumnDefinition Width="18*"/>
+                                    <ColumnDefinition Width="48*" />
+                                    <ColumnDefinition Width="127*"/>
+                                    <ColumnDefinition Width="197*"/>
+                                </Grid.ColumnDefinitions>
+                                <Border Grid.ColumnSpan="2">
+                                    <Image Source="/mail.png"  Margin="15,3,3,3"/>
+
+                                </Border>
+                                <TextBox x:Name="txt_email"  Grid.Column="2" Background="Transparent" 
+                                  Margin="10,0,10,0"  VerticalAlignment="Center" FontFamily="Bahnschrift" 
+                                         FontSize="20" BorderBrush="{x:Null}" Cursor="Hand" Grid.ColumnSpan="3"/>
+                            </Grid>
+
+                        </Border>
+                        <TextBlock Height="30" Margin="50,20,50,0" Text="Password"   FontSize="22" FontFamily="Bahnschrift" Foreground="Black"></TextBlock>
+                        <Border Margin="50,0,50,0" Height="50" Background="#FFCCC9C9" CornerRadius="5,5,5,5" >
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="45*" />
+                                    <ColumnDefinition Width="26*" />
+                                    <ColumnDefinition Width="300*"/>
+                                    <ColumnDefinition Width="45*" />
+                                </Grid.ColumnDefinitions>
+                                <Border Grid.ColumnSpan="2" Margin="0,0,26,0">
+                                    <Image Source="/key.png"  Margin="12,10,3,9"/>
+
+                                </Border>
+                                <TextBox x:Name="txt_passwordun"  Grid.Column="1" Background="Transparent"
+                                         Visibility="Hidden"
+                                  Margin="10,0,10,0"  VerticalAlignment="Center" FontFamily="Bahnschrift" 
+                                         FontSize="20" BorderBrush="{x:Null}" Cursor="Hand" TextChanged="txt_passwordun_TextChanged" Grid.ColumnSpan="2" />
+                                <PasswordBox x:Name="txt_pass" Grid.Column="1" Background="Transparent" 
+                                  Margin="10,0,10,0"  VerticalAlignment="Center" FontFamily="Bahnschrift" 
+                                         FontSize="20" BorderBrush="{x:Null}" PasswordChanged="txt_pass_PasswordChanged" Cursor="Hand" SelectionOpacity="-4" AutomationProperties.IsOffscreenBehavior="Onscreen" Grid.ColumnSpan="2"  />
+                                <Border Grid.Column="2" Grid.ColumnSpan="2" Margin="300,0,0,0">
+                                    <Image x:Name="eye" Source="/show.png"  Margin="3,3,15,3" Visibility="Hidden" MouseDown="eye_MouseDown"  />
+
+
+                                </Border>
+                                <Border Grid.Column="2" Grid.ColumnSpan="2" Margin="300,0,0,0">
+                                    <Image x:Name="eyeopen" Source="/visible.png"  Margin="3,3,15,3" Visibility="Hidden" MouseDown="eyeopen_MouseDown"  />
+
+
+                                </Border>
+                            </Grid>
+
+                        </Border>
+                        <Border Height="26" Margin="50,15,50,0" Width="445" >
+                            <Grid Margin="-21,0,-25,0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="20"/>
+                                    <ColumnDefinition Width="63*"/>
+
+                                    <ColumnDefinition Width="62*"/>
+                                    <ColumnDefinition/>
+
+                                </Grid.ColumnDefinitions>
+                                <CheckBox Checked="CheckBox_Checked" VerticalAlignment="Center"/>
+                                <TextBlock Text="Remember me" FontSize="17" 
+                                           Grid.Column="1" FontWeight="Bold" RenderTransformOrigin="0.58,0.514" Grid.ColumnSpan="2" Margin="0,0,247,3"/>
+                                <TextBlock x:Name="fgtxt" Text="Forgot Password" FontSize="17" VerticalAlignment="Top" HorizontalAlignment="Right"        
+                                           Grid.Column="2" FontWeight="Bold" Foreground="#FF2A0985" Cursor="Hand" MouseEnter="TextBlock_MouseEnter" MouseLeave="fgtxt_MouseLeave" Width="136" Grid.ColumnSpan="2"/>
+
+
+
+                            </Grid>
+
+                        </Border>
+                        <Border x:Name="bolderlogin" Height="50" Background="#FF2F1C6A" Width="503" Margin="50,15,50,0" CornerRadius="5" Cursor="Hand" MouseEnter="Border_MouseEnter" MouseLeave="bolderlogin_MouseLeave">
+                            <TextBlock Text="Login" Foreground="White" FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Bahnschrift"/>
+                        </Border>
+                        <Border Height="26" Margin="50,45,50,0" Width="496" >
+                            <Grid Margin="-23,0,-25,0">
+                                <Grid.ColumnDefinitions>
+
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="0.6*"/>
+
+
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Text="Don't have an account ? " FontSize="20" VerticalAlignment="Top" HorizontalAlignment="Right"
+                                           Grid.Column="0" FontWeight="Bold"/>
+                                <TextBlock x:Name="signup" Text="Sign up" FontSize="20" VerticalAlignment="Top" 
+                                           Grid.Column ="1" FontWeight="Bold" Foreground="#FF2A0985" MouseEnter="TextBlock_MouseEnter_1" MouseLeave="signup_MouseLeave" Cursor="Hand"/>
+
+
+
+                            </Grid>
+
+                        </Border>
+
+                    </StackPanel>
+
+                </Grid>
+            </Grid>
+
+        </Border>
+    </Grid>
+</Window>

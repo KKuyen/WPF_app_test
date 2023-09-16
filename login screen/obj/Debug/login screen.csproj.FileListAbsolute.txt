@@ -1,0 +1,16 @@
+D:\code\login screen\login screen\bin\Debug\login screen.exe.config
+D:\code\login screen\login screen\bin\Debug\login screen.exe
+D:\code\login screen\login screen\bin\Debug\login screen.pdb
+D:\code\login screen\login screen\obj\Debug\login screen.csproj.AssemblyReference.cache
+D:\code\login screen\login screen\obj\Debug\login screen.csproj.SuggestedBindingRedirects.cache
+D:\code\login screen\login screen\obj\Debug\MainWindow.g.cs
+D:\code\login screen\login screen\obj\Debug\App.g.cs
+D:\code\login screen\login screen\obj\Debug\login screen_MarkupCompile.cache
+D:\code\login screen\login screen\obj\Debug\login screen_MarkupCompile.lref
+D:\code\login screen\login screen\obj\Debug\MainWindow.baml
+D:\code\login screen\login screen\obj\Debug\login screen.g.resources
+D:\code\login screen\login screen\obj\Debug\login_screen.Properties.Resources.resources
+D:\code\login screen\login screen\obj\Debug\login screen.csproj.GenerateResource.cache
+D:\code\login screen\login screen\obj\Debug\login screen.csproj.CoreCompileInputs.cache
+D:\code\login screen\login screen\obj\Debug\login screen.exe
+D:\code\login screen\login screen\obj\Debug\login screen.pdb
