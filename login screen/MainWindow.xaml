@@ -134,28 +134,29 @@
                             </Grid>
 
                         </Border>
-                        <Border Height="26" Margin="50,15,50,0" Width="445" >
+                        <Border Height="26" Margin="50,15,50,0" Width="443" >
                             <Grid Margin="-21,0,-25,0">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="20"/>
-                                    <ColumnDefinition Width="63*"/>
+                                    <ColumnDefinition Width="236*"/>
 
-                                    <ColumnDefinition Width="62*"/>
-                                    <ColumnDefinition/>
+                                    <ColumnDefinition Width="48*"/>
+                                    <ColumnDefinition Width="183*"/>
+                                    <ColumnDefinition Width="4*"/>
 
                                 </Grid.ColumnDefinitions>
                                 <CheckBox Checked="CheckBox_Checked" VerticalAlignment="Center"/>
                                 <TextBlock Text="Remember me" FontSize="17" 
-                                           Grid.Column="1" FontWeight="Bold" RenderTransformOrigin="0.58,0.514" Grid.ColumnSpan="2" Margin="0,0,247,3"/>
+                                           Grid.Column="1" FontWeight="Bold" RenderTransformOrigin="0.58,0.514" Margin="0,0,16,3"/>
                                 <TextBlock x:Name="fgtxt" Text="Forgot Password" FontSize="17" VerticalAlignment="Top" HorizontalAlignment="Right"        
-                                           Grid.Column="2" FontWeight="Bold" Foreground="#FF2A0985" Cursor="Hand" MouseEnter="TextBlock_MouseEnter" MouseLeave="fgtxt_MouseLeave" Width="136" Grid.ColumnSpan="2"/>
+                                           Grid.Column="3" FontWeight="Bold" Foreground="#FF2A0985" Cursor="Hand" MouseEnter="TextBlock_MouseEnter" MouseLeave="fgtxt_MouseLeave" Width="141" Grid.ColumnSpan="2"/>
 
 
 
                             </Grid>
 
                         </Border>
-                        <Border x:Name="bolderlogin" Height="50" Background="#FF2F1C6A" Width="503" Margin="50,15,50,0" CornerRadius="5" Cursor="Hand" MouseEnter="Border_MouseEnter" MouseLeave="bolderlogin_MouseLeave">
+                        <Border x:Name="bolderlogin" Height="50" Background="#FF2F1C6A" Width="508" Margin="50,15,50,0" CornerRadius="5" Cursor="Hand" MouseEnter="Border_MouseEnter" MouseLeave="bolderlogin_MouseLeave">
                             <TextBlock Text="Login" Foreground="White" FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Bahnschrift"/>
                         </Border>
                         <Border Height="26" Margin="50,45,50,0" Width="496" >
