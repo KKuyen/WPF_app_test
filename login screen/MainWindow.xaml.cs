@@ -108,26 +108,17 @@ namespace login_screen
             bolderlogin.Background=bldr.Background;
         }
 
-        private void TextBlock_MouseEnter(object sender, MouseEventArgs e)
-        {
-            txtfg.Background=fgtxt.Foreground;
-            fgtxt.Foreground= new SolidColorBrush(Colors.MediumPurple);
-        }
-
-        private void fgtxt_MouseLeave(object sender, MouseEventArgs e)
-        {
-            fgtxt.Foreground=txtfg.Foreground;
-        }
+      
 
        
         private void TextBlock_MouseEnter_1(object sender, MouseEventArgs e)
         {
-            signup.Foreground = new SolidColorBrush(Colors.MediumPurple);
+           
         }
 
         private void signup_MouseLeave(object sender, MouseEventArgs e)
         {
-            signup.Foreground = txtfg.Foreground;
+            
         }
     }
 }

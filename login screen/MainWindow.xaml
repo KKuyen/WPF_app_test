@@ -21,7 +21,7 @@
 
         </Border>
         <Border CornerRadius=" 0 10 10 0" Background="#FFFFFF" Margin="385,0,0,48" Grid.ColumnSpan="2">
-            <Grid OpacityMask="#FFFA0000" Margin="0,0,0,-86">
+            <Grid Margin="0,0,0,-86">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="30"/>
                     <RowDefinition Height="1000"/>
@@ -53,7 +53,7 @@
                             BorderThickness="0"
                             
                             Content="x"
-                            Foreground="Black"
+                            Foreground="Red"
                             FontSize="20"
                             FontFamily="Montserrat"
                             Grid.Column="2"
@@ -64,7 +64,7 @@
                         >
                         <Button.Resources>
                             <Style TargetType="{x:Type Border}">
-                                <Setter Property="CornerRadius" Value="0 7 0 0"/>
+                                <Setter Property="CornerRadius" Value="0, 7 ,0 ,0"/>
                             </Style>
                         </Button.Resources>
 
@@ -73,14 +73,14 @@
 
 
                     <StackPanel Width="auto" Margin="5,40,0,-724" Grid.ColumnSpan="3">
-                        <Border Height="147" Width="154" Margin="10, 15,0,0" CornerRadius="10,10,10,10" >
+                        <Border Height="147" Width="154" Margin="0, 15,0,0" CornerRadius="10,10,10,10" >
                             <Border.Background>
                                 <ImageBrush ImageSource="/images.jpeg"/>
                             </Border.Background>
 
 
                         </Border>
-                        <TextBlock Margin="10,25,0,0" Height="31" Text="Hello!Welcome back" FontSize="30" TextAlignment="Center" FontFamily="Bahnschrift" Foreground="#FF2F1C6A" Width="586"/>
+                        <TextBlock Margin="0,25,0,0" Height="31" Text="Hello!Welcome back" FontSize="30" TextAlignment="Center" FontFamily="Bahnschrift" Foreground="#FF2F1C6A" Width="586"/>
                         <TextBlock Height="30" Margin="50,10,50,0" Text="Email"   FontSize="22" FontFamily="Bahnschrift" Foreground="Black"/>
                         <Border Margin="50,0,50,0" Height="50" Background="#FFCCC9C9" CornerRadius="5,5,5,5" >
                             <Grid>
@@ -121,12 +121,12 @@
                                 <PasswordBox x:Name="txt_pass" Grid.Column="1" Background="Transparent" 
                                   Margin="10,0,10,0"  VerticalAlignment="Center" FontFamily="Bahnschrift" 
                                          FontSize="20" BorderBrush="{x:Null}" PasswordChanged="txt_pass_PasswordChanged" Cursor="Hand" SelectionOpacity="-4" AutomationProperties.IsOffscreenBehavior="Onscreen" Grid.ColumnSpan="2"  />
-                                <Border Grid.Column="2" Grid.ColumnSpan="2" Margin="300,0,0,0">
+                                <Border Grid.Column="3" Margin="10,0,0,0">
                                     <Image x:Name="eye" Source="/show.png"  Margin="3,3,15,3" Visibility="Hidden" MouseDown="eye_MouseDown"  />
 
 
                                 </Border>
-                                <Border Grid.Column="2" Grid.ColumnSpan="2" Margin="300,0,0,0">
+                                <Border Grid.Column="3" Margin="10,0,0,0">
                                     <Image x:Name="eyeopen" Source="/visible.png"  Margin="3,3,15,3" Visibility="Hidden" MouseDown="eyeopen_MouseDown"  />
 
 
@@ -134,8 +134,8 @@
                             </Grid>
 
                         </Border>
-                        <Border Height="26" Margin="50,15,50,0" Width="443" >
-                            <Grid Margin="-21,0,-25,0">
+                        <Border Height="26" Margin="5,15,50,0" Width="449" >
+                            <Grid Margin="10,0,-25,0">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="20"/>
                                     <ColumnDefinition Width="236*"/>
@@ -149,17 +149,28 @@
                                 <TextBlock Text="Remember me" FontSize="17" 
                                            Grid.Column="1" FontWeight="Bold" RenderTransformOrigin="0.58,0.514" Margin="0,0,16,3"/>
                                 <TextBlock x:Name="fgtxt" Text="Forgot Password" FontSize="17" VerticalAlignment="Top" HorizontalAlignment="Right"        
-                                           Grid.Column="3" FontWeight="Bold" Foreground="#FF2A0985" Cursor="Hand" MouseEnter="TextBlock_MouseEnter" MouseLeave="fgtxt_MouseLeave" Width="141" Grid.ColumnSpan="2"/>
+                                           Grid.Column="3" FontWeight="Bold"  Cursor="Hand"  Width="134" Grid.ColumnSpan="2" Margin="0,0,-15,0">
+                                    <TextBlock.Style>
+                                        <Style TargetType="TextBlock">
+                                            <Setter Property="Foreground" Value="#FF2A0985" />
+                                            <Style.Triggers>
+                                                <Trigger Property="IsMouseOver" Value="True">
+                                                    <Setter Property="Foreground" Value="MediumPurple" ></Setter>
+                                                </Trigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </TextBlock.Style>
+                                </TextBlock>
 
 
 
                             </Grid>
 
                         </Border>
-                        <Border x:Name="bolderlogin" Height="50" Background="#FF2F1C6A" Width="508" Margin="50,15,50,0" CornerRadius="5" Cursor="Hand" MouseEnter="Border_MouseEnter" MouseLeave="bolderlogin_MouseLeave">
+                        <Border x:Name="bolderlogin" Height="50" Background="#FF2F1C6A" Width="478" Margin="50,15,50,0" CornerRadius="5" Cursor="Hand" MouseEnter="Border_MouseEnter" MouseLeave="bolderlogin_MouseLeave">
                             <TextBlock Text="Login" Foreground="White" FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Bahnschrift"/>
                         </Border>
-                        <Border Height="26" Margin="50,45,50,0" Width="496" >
+                        <Border Height="26" Margin="50,45,50,0" Width="483" >
                             <Grid Margin="-23,0,-25,0">
                                 <Grid.ColumnDefinitions>
 
@@ -171,7 +182,19 @@
                                 <TextBlock Text="Don't have an account ? " FontSize="20" VerticalAlignment="Top" HorizontalAlignment="Right"
                                            Grid.Column="0" FontWeight="Bold"/>
                                 <TextBlock x:Name="signup" Text="Sign up" FontSize="20" VerticalAlignment="Top" 
-                                           Grid.Column ="1" FontWeight="Bold" Foreground="#FF2A0985" MouseEnter="TextBlock_MouseEnter_1" MouseLeave="signup_MouseLeave" Cursor="Hand"/>
+                                           Grid.Column ="1" FontWeight="Bold" MouseEnter="TextBlock_MouseEnter_1" MouseLeave="signup_MouseLeave" Cursor="Hand">
+                                    <TextBlock.Style>
+                                        <Style TargetType="TextBlock">
+                                            <Setter Property="Foreground" Value="#FF2A0985" />
+                                            <Style.Triggers>
+                                                <Trigger Property="IsMouseOver" Value="True">
+                                                    <Setter Property="Foreground" Value="MediumPurple" ></Setter>
+                                                </Trigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </TextBlock.Style>
+                                </TextBlock>
+
 
 
 
