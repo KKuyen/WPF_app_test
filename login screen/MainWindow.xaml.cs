@@ -21,6 +21,14 @@ namespace login_screen
     public partial class MainWindow : Window
     {
 
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            // Cancel the closure
+            e.Cancel = true;
+
+            // Hide the window
+            Hide();
+        }
         public MainWindow()
         {
             InitializeComponent();
@@ -95,7 +103,10 @@ namespace login_screen
 
         }
         Border bldr = new Border();
-        TextBlock txtfg=new TextBlock();    
+        TextBlock txtfg=new TextBlock();
+
+        public MainView PageContent { get; private set; }
+
         private void Border_MouseEnter(object sender, MouseEventArgs e)
         {
            
@@ -111,14 +122,27 @@ namespace login_screen
       
 
        
-        private void TextBlock_MouseEnter_1(object sender, MouseEventArgs e)
-        {
-           
-        }
+        
 
-        private void signup_MouseLeave(object sender, MouseEventArgs e)
+        private void bolderlogin_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            
+            //dIEU KIEN DE DANG NHAP
+            if (txt_email.Text != "" && txt_pass.Password != "")
+            {
+                // thoa man
+                
+                MainView mainView = new MainView();
+                mainView.Show();
+                this.Close();
+
+
+            }
+            else
+            {
+                Notification.Text = "Please fill the blanks";
+
+
+            }    
         }
     }
 }

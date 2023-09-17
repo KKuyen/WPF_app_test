@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("visible.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("190b92ceb373d89b836c8bfe2793a28c.jpg")]
 
 

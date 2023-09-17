@@ -14,3 +14,5 @@ D:\code\login screen\login screen\obj\Debug\login screen.csproj.GenerateResource
 D:\code\login screen\login screen\obj\Debug\login screen.csproj.CoreCompileInputs.cache
 D:\code\login screen\login screen\obj\Debug\login screen.exe
 D:\code\login screen\login screen\obj\Debug\login screen.pdb
+D:\code\login screen\login screen\obj\Debug\MainView.g.cs
+D:\code\login screen\login screen\obj\Debug\MainView.baml

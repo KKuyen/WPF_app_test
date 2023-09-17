@@ -39,15 +39,11 @@
                             Foreground="Black"
                             FontSize="20"
                             FontFamily="Montserrat"
-                            Grid.Column="1"
                             
                             Cursor="Hand"
-                            Click="btnMinisize_Click"
+                            Click="btnMinisize_Click" BorderBrush="{x:Null}" Background="{x:Null}" Grid.ColumnSpan="2" Margin="513,0,12,0"
                             
-                        >
-
-
-                    </Button>
+                        />
                     <Button x:Name="btnDelete"
                             Background="Transparent"
                             BorderThickness="0"
@@ -56,10 +52,10 @@
                             Foreground="Red"
                             FontSize="20"
                             FontFamily="Montserrat"
-                            Grid.Column="2"
+                            Grid.Column="1"
                             
                             Cursor="Hand"
-                            Click="btnDelete_Click" Height="30" VerticalAlignment="Top" OpacityMask="Red" BorderBrush="Red"
+                            Click="btnDelete_Click" Height="30" VerticalAlignment="Center" OpacityMask="Red" BorderBrush="Red" Grid.ColumnSpan="2" Margin="15,0,0,0"
                            
                         >
                         <Button.Resources>
@@ -80,7 +76,7 @@
 
 
                         </Border>
-                        <TextBlock Margin="0,25,0,0" Height="31" Text="Hello!Welcome back" FontSize="30" TextAlignment="Center" FontFamily="Bahnschrift" Foreground="#FF2F1C6A" Width="586"/>
+                        <TextBlock x:Name="Notification" Margin="0,25,0,0" Height="31" Text="Hello!Welcome back" FontSize="30" TextAlignment="Center" FontFamily="Bahnschrift" Foreground="#FF2F1C6A" Width="586"/>
                         <TextBlock Height="30" Margin="50,10,50,0" Text="Email"   FontSize="22" FontFamily="Bahnschrift" Foreground="Black"/>
                         <Border Margin="50,0,50,0" Height="50" Background="#FFCCC9C9" CornerRadius="5,5,5,5" >
                             <Grid>
@@ -147,7 +143,7 @@
                                 </Grid.ColumnDefinitions>
                                 <CheckBox Checked="CheckBox_Checked" VerticalAlignment="Center"/>
                                 <TextBlock Text="Remember me" FontSize="17" 
-                                           Grid.Column="1" FontWeight="Bold" RenderTransformOrigin="0.58,0.514" Margin="0,0,16,3"/>
+                                           Grid.Column="1" RenderTransformOrigin="0.58,0.514" Margin="0,0,16,3"/>
                                 <TextBlock x:Name="fgtxt" Text="Forgot Password" FontSize="17" VerticalAlignment="Top" HorizontalAlignment="Right"        
                                            Grid.Column="3" FontWeight="Bold"  Cursor="Hand"  Width="134" Grid.ColumnSpan="2" Margin="0,0,-15,0">
                                     <TextBlock.Style>
@@ -167,7 +163,7 @@
                             </Grid>
 
                         </Border>
-                        <Border x:Name="bolderlogin" Height="50" Background="#FF2F1C6A" Width="478" Margin="50,15,50,0" CornerRadius="5" Cursor="Hand" MouseEnter="Border_MouseEnter" MouseLeave="bolderlogin_MouseLeave">
+                        <Border x:Name="bolderlogin" Height="50" Background="#FF2F1C6A" Width="478" Margin="50,15,50,0" CornerRadius="5" Cursor="Hand" MouseEnter="Border_MouseEnter" MouseLeave="bolderlogin_MouseLeave" MouseDown="bolderlogin_MouseDown">
                             <TextBlock Text="Login" Foreground="White" FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Bahnschrift"/>
                         </Border>
                         <Border Height="26" Margin="50,45,50,0" Width="483" >
@@ -180,9 +176,9 @@
 
                                 </Grid.ColumnDefinitions>
                                 <TextBlock Text="Don't have an account ? " FontSize="20" VerticalAlignment="Top" HorizontalAlignment="Right"
-                                           Grid.Column="0" FontWeight="Bold"/>
-                                <TextBlock x:Name="signup" Text="Sign up" FontSize="20" VerticalAlignment="Top" 
-                                           Grid.Column ="1" FontWeight="Bold" MouseEnter="TextBlock_MouseEnter_1" MouseLeave="signup_MouseLeave" Cursor="Hand">
+                                           Grid.Column="0"/>
+                                <TextBlock x:Name="signup" Text="Sign up" FontSize="20" 
+                                           Grid.Column ="1" Cursor="Hand" Margin="0,0,0,-1" FontWeight="Bold">
                                     <TextBlock.Style>
                                         <Style TargetType="TextBlock">
                                             <Setter Property="Foreground" Value="#FF2A0985" />

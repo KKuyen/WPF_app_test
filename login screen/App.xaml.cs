@@ -13,5 +13,6 @@ namespace login_screen
     /// </summary>
     public partial class App : Application
     {
+        
     }
 }
