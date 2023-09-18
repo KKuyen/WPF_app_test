@@ -16,3 +16,5 @@ D:\code\login screen\login screen\obj\Debug\login screen.exe
 D:\code\login screen\login screen\obj\Debug\login screen.pdb
 D:\code\login screen\login screen\obj\Debug\MainView.g.cs
 D:\code\login screen\login screen\obj\Debug\MainView.baml
+D:\code\login screen\login screen\obj\Debug\exit.g.cs
+D:\code\login screen\login screen\obj\Debug\exit.baml

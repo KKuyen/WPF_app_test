@@ -20,25 +20,27 @@
             <ColumnDefinition Width="486*" />
             <ColumnDefinition Width="431*"/>
         </Grid.ColumnDefinitions>
-        <Border  CornerRadius="20, 0 ,0 ,20" Margin="0,0,427,0" Background="#FF1F124A" Grid.ColumnSpan="3" >
+        <Border  CornerRadius="20, 0 ,0 ,20" Margin="0,0,427,0" Background="#FFDEDEDE" Grid.ColumnSpan="3" Height="908" VerticalAlignment="Center" >
 
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="1.0*"/>
-                    <RowDefinition Height="1.8*"/>
+                    <RowDefinition Height="60"/>
                     <RowDefinition Height="1.8*"/>
                     <RowDefinition Height="1.8*"/>
                     <RowDefinition Height="1.8*"/>
                     <RowDefinition Height="1.8*"/>
 
-                    <RowDefinition Height="4.9*"/>
+
+                    <RowDefinition Height="6.9*"/>
+                    <RowDefinition Height="1.8*"/>
 
                 </Grid.RowDefinitions>
                 <Grid HorizontalAlignment="Left" Margin="10,0,0,0" Grid.RowSpan="2" Width="335">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="110"/>
+                        <ColumnDefinition Width="109"/>
 
                         <ColumnDefinition/>
+                        <ColumnDefinition Width="109"></ColumnDefinition>
 
                     </Grid.ColumnDefinitions>
                     <Border Width="52" Height="52" VerticalAlignment="Top" HorizontalAlignment="Right"
@@ -49,22 +51,151 @@
 
                     </Border>
                     <TextBlock
-                                Text="Name" FontSize="30" Foreground="White" Grid.ColumnSpan="2" Margin="74,18,36,109" FontFamily="Bahnschrift"      />
+                                Text="Name" FontSize="30" Foreground="#FF0B0422" Grid.ColumnSpan="2" Margin="74,18,0,101" FontFamily="Bahnschrift"      />
+                    <Menu Grid.Column="2" Background="Transparent">
+                        <MenuItem Header="" Height="70" Width="33">
+                            <MenuItem.Icon>
+                                <Image Source="/options.png" Margin="-4,-32,-9,-28"></Image>
+                            </MenuItem.Icon>
+                            <MenuItem Header="Information " Width="160" Height="50"  Background="#FFDEDEDE" FontWeight="Bold"/>
+                            <MenuItem Header="Logout"  Width="160" Height="50" Background="#FFD8D8D8" FontWeight="Bold" Click="MenuItem_Click_1">
+                                <MenuItem.Icon >
+                                    <Image Source="/exit.png"  Width="15" Height="15" Margin="3,0,0,0"></Image>
+                                </MenuItem.Icon>
+                            </MenuItem>
+                            
+                        </MenuItem>
+
+
+                    </Menu>
 
                 </Grid>
-                <Border Grid.Row="1" Margin="15,10,43,0" CornerRadius="10,10,10,10" Background="#FF777BCD" />
+
+                <Border Grid.Row="1" CornerRadius="10,10,10,10"  Cursor="Hand">
+                    <Border.Style>
+                        <Style TargetType="Border">
+                            <Setter Property="Background" >
+
+                                <Setter.Value>
+                                    <SolidColorBrush Color="#FF0B0422" Opacity="0.9"/>
+                                </Setter.Value>
+                            </Setter>
+                            <Setter Property="Margin" Value="12,10,128,0"/>
+
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" >
+                                        <Setter.Value>
+                                            <SolidColorBrush Color="#FF130D28" Opacity="0.8"/>
+                                        </Setter.Value>
+                                    </Setter>
+
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Border.Style>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="2*"/>
+
+                        </Grid.ColumnDefinitions>
+                        <Border Width="50" Height="50"
+                                Margin="10,0,0,0" 
+                                >
+                            <Border.Background>
+                                <ImageBrush ImageSource="/home.png"/>
+                            </Border.Background>
+                            <Border.BindingGroup>
+                                <BindingGroup/>
+                            </Border.BindingGroup>
+
+                        </Border>
+                        <TextBlock Grid.Column="1"
+                                   VerticalAlignment="Center"
+                                   FontSize="35"
+                                   Text="Home" Foreground="#FF999999" Margin="10,0,0,0">
+
+                        </TextBlock>
+                    </Grid>
+                </Border>
 
 
-                <Border Grid.Row="2" Margin="15,10,43,0" CornerRadius="10,10,10,10" Background="#FF777BCD" />
+                <Border Grid.Row="2" Margin="12,10,128,0" CornerRadius="10,10,10,10"  Height="86" VerticalAlignment="Top" Grid.RowSpan="2" Cursor="Hand">
+                    <Border.Style>
+                        <Style TargetType="Border">
+                            <Setter Property="Background" >
+                                <Setter.Value>
+                                    <SolidColorBrush Color="#FF0B0422" Opacity="0.9"/>
+                                </Setter.Value>
+                            </Setter>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" >
+                                        <Setter.Value>
+                                            <SolidColorBrush Color="#FF130D28" Opacity="0.8"/>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Border.Style>
+                </Border>
+                <Border Grid.Row="4" Margin="12,10,128,0" CornerRadius="10,10,10,10"  Cursor="Hand">
+                    <Border.Style>
+                        <Style TargetType="Border">
+                            <Setter Property="Background" >
+                                <Setter.Value>
+                                    <SolidColorBrush Color="#FF0B0422" Opacity="0.9"/>
+                                </Setter.Value>
+                            </Setter>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" >
+                                        <Setter.Value>
+                                            <SolidColorBrush Color="#FF130D28" Opacity="0.8"/>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Border.Style>
+
+                </Border>
+                <Border Grid.Row="3" Margin="12,10,128,0" CornerRadius="10,10,10,10" Height="86" VerticalAlignment="Top" Grid.RowSpan="2"  Cursor="Hand">
+                    <Border.Style>
+                        <Style TargetType="Border">
+                            <Setter Property="Background" >
+                                <Setter.Value>
+                                    <SolidColorBrush Color="#FF0B0422" Opacity="0.9"/>
+                                </Setter.Value>
+                            </Setter>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" >
+                                        <Setter.Value>
+                                            <SolidColorBrush Color="#FF130D28" Opacity="0.8"/>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Border.Style>
+                </Border>
+                <Grid Grid.Row="6">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="21*"/>
+
+                        <ColumnDefinition Width="29*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                </Grid>
 
 
-                <Border Grid.Row="3" Margin="15,10,43,0" CornerRadius="10,10,10,10" Background="#FF777BCD"/>
-                <Border Grid.Row="4" Margin="15,10,43,0" CornerRadius="10,10,10,10" Background="#FF777BCD"/>
 
 
             </Grid>
         </Border>
-        <Border CornerRadius=" 20 20 20 20" Background="#FF0B0422" Grid.ColumnSpan="2" Margin="0,0,-7,0" Grid.Column="2" HorizontalAlignment="Right" Width="893">
+        <Border CornerRadius=" 20 20 20 20" Background="#FF0B0422" Grid.ColumnSpan="3" Grid.Column="1" HorizontalAlignment="Left" Width="983">
             <Grid Margin="0,0,0,-86">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="40" />
@@ -85,7 +216,7 @@
                             FontFamily="Montserrat"
                             
                             Cursor="Hand"
-                            Click="btnMinisize_Click" BorderBrush="{x:Null}" Background="{x:Null}" HorizontalAlignment="Left" Width="42" Grid.ColumnSpan="2" Margin="804,0,0,40" RenderTransformOrigin="0.5,0.5"
+                            Click="btnMinisize_Click" BorderBrush="{x:Null}" Background="{x:Null}" HorizontalAlignment="Left" Width="42" Grid.ColumnSpan="2" Margin="885,0,0,40" RenderTransformOrigin="0.5,0.5"
                             
                         >
                         <Button.RenderTransform>
@@ -105,10 +236,10 @@
                             Foreground="Red"
                             FontSize="22"
                             FontFamily="Montserrat"
-                            Grid.Column="2"
+                            Grid.Column="1"
                             
                             Cursor="Hand"
-                            Click="btnDelete_Click" Height="40" VerticalAlignment="Top" OpacityMask="Red" BorderBrush="Red"
+                            Click="btnDelete_Click" Height="40" VerticalAlignment="Top" OpacityMask="Red" BorderBrush="Red" Grid.ColumnSpan="2" Margin="11,0,10,0"
                            
                         >
                         <Button.Resources>
