@@ -63,11 +63,20 @@
     <Compile Include="MainView.xaml.cs">
       <DependentUpon>MainView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UserControl1.cs">
-      <SubType>UserControl</SubType>
+    <Compile Include="ViewModels\InfoVM.cs" />
+    <Compile Include="ViewModels\MenuVM.cs" />
+    <Compile Include="ViewModels\Oder.cs" />
+    <Compile Include="Views\Information.xaml.cs">
+      <DependentUpon>Information.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UserControl1.Designer.cs">
-      <DependentUpon>UserControl1.cs</DependentUpon>
+    <Compile Include="Views\Menu.xaml.cs">
+      <DependentUpon>Menu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Order.xaml.cs">
+      <DependentUpon>Order.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SignUp.xaml.cs">
+      <DependentUpon>SignUp.xaml</DependentUpon>
     </Compile>
     <Page Include="exit.xaml">
       <SubType>Designer</SubType>
@@ -89,6 +98,22 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Views\Information.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Menu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Order.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SignUp.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -144,10 +169,52 @@
     <Resource Include="exit.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="options.png" />
+    <Resource Include="user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="shopping-cart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons8-product-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons8-user-manual-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons8-import-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons8-product-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons8-menu-vertical-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\icons8-upload-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\tải xuống.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\icons8-circle-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\icons8-circle-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\show.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\visible.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\down.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

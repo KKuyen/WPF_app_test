@@ -4,11 +4,28 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:login_screen"
+        xmlns:viewmodels="clr-namespace:login_screen.ViewModels"
+          xmlns:views="clr-namespace:login_screen.Views"
+     
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True"
         Background="Transparent"
         MouseDown="Window_MouseDown"
         Title="MainWindow" Height="950" Width="1268" Icon="/tải xuống.png">
+    <Window.Resources>
+        <DataTemplate x:Name="menuTemplate" DataType="{x:Type viewmodels:MenuVM}">
+            <views:Menu DataContext="{Binding}"/>
+        </DataTemplate>
+        <DataTemplate x:Name="InfoTemplate" DataType="{x:Type viewmodels:InfoVM}">
+            <views:Information DataContext="{Binding}"/>
+        </DataTemplate>
+        <DataTemplate x:Name="OderTemplate" DataType="{x:Type viewmodels:Oder}">
+            <views:Order DataContext="{Binding}"/>
+
+
+        </DataTemplate>
+
+    </Window.Resources>
     <Grid Margin="10,0,0,42" Background="Transparent">
         <Grid.RowDefinitions>
             <RowDefinition/>
@@ -17,10 +34,10 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="282*" />
             <ColumnDefinition Width="60*"/>
-            <ColumnDefinition Width="486*" />
-            <ColumnDefinition Width="431*"/>
+            <ColumnDefinition Width="493*" />
+            <ColumnDefinition Width="423*"/>
         </Grid.ColumnDefinitions>
-        <Border  CornerRadius="20, 0 ,0 ,20" Margin="0,0,427,0" Background="#FFDEDEDE" Grid.ColumnSpan="3" Height="908" VerticalAlignment="Center" >
+        <Border  CornerRadius="20, 0 ,0 ,20" Margin="0,0,427,0" Background="#FF050505" Grid.ColumnSpan="3" Height="908" VerticalAlignment="Center" >
 
             <Grid>
                 <Grid.RowDefinitions>
@@ -31,8 +48,9 @@
                     <RowDefinition Height="1.8*"/>
 
 
-                    <RowDefinition Height="6.9*"/>
+
                     <RowDefinition Height="1.8*"/>
+                    <RowDefinition Height="6.9*"/>
 
                 </Grid.RowDefinitions>
                 <Grid HorizontalAlignment="Left" Margin="10,0,0,0" Grid.RowSpan="2" Width="335">
@@ -44,26 +62,31 @@
 
                     </Grid.ColumnDefinitions>
                     <Border Width="52" Height="52" VerticalAlignment="Top" HorizontalAlignment="Right"
-                       CornerRadius="50,50,50,50" Margin="0,10,48,0" RenderTransformOrigin="0.63,-0.17"    >
+                       CornerRadius="50,50,50,50" Margin="0,10,48,0" RenderTransformOrigin="0.63,-0.17" BorderBrush="#FF00FF69" BorderThickness="3,2.7,3,3"    >
                         <Border.Background >
                             <ImageBrush ImageSource="/190b92ceb373d89b836c8bfe2793a28c.jpg"/>
                         </Border.Background>
 
                     </Border>
                     <TextBlock
-                                Text="Name" FontSize="30" Foreground="#FF0B0422" Grid.ColumnSpan="2" Margin="74,18,0,101" FontFamily="Bahnschrift"      />
-                    <Menu Grid.Column="2" Background="Transparent">
-                        <MenuItem Header="" Height="70" Width="33">
+                                Text="Name" FontSize="30" Foreground="White" Grid.ColumnSpan="2" Margin="74,18,0,101" FontFamily="Bahnschrift"      />
+                    <Menu Grid.Column="2" Background="Transparent" Margin="0,0,38,88" Cursor="Hand">
+                        <MenuItem Header="" Height="67" Width="41" Click="MenuItem_Click_3" BorderBrush="{x:Null}" Margin="5,0,0,0">
                             <MenuItem.Icon>
-                                <Image Source="/options.png" Margin="-4,-32,-9,-28"></Image>
+                                <Image Source="/icons8-menu-vertical-100.png" Margin="0,-30,-28,-29"/>
                             </MenuItem.Icon>
-                            <MenuItem Header="Information " Width="160" Height="50"  Background="#FFDEDEDE" FontWeight="Bold"/>
-                            <MenuItem Header="Logout"  Width="160" Height="50" Background="#FFD8D8D8" FontWeight="Bold" Click="MenuItem_Click_1">
+
+                            <MenuItem Header="Profile" Width="160" Height="50"  Background="#FFDEDEDE" FontWeight="Bold" Click="MenuItem_Click_2" >
                                 <MenuItem.Icon >
-                                    <Image Source="/exit.png"  Width="15" Height="15" Margin="3,0,0,0"></Image>
+                                    <Image Source="/user.png"  Width="15" Height="15" Margin="0,0,0,0"></Image>
                                 </MenuItem.Icon>
                             </MenuItem>
-                            
+                            <MenuItem Header="Logout"  Width="160" Height="50" Background="#FFD8D8D8" FontWeight="Bold" Click="MenuItem_Click_1">
+                                <MenuItem.Icon >
+                                    <Image Source="/exit.png"  Width="15" Height="15" Margin="0,0,0,0"></Image>
+                                </MenuItem.Icon>
+                            </MenuItem>
+
                         </MenuItem>
 
 
@@ -71,37 +94,16 @@
 
                 </Grid>
 
-                <Border Grid.Row="1" CornerRadius="10,10,10,10"  Cursor="Hand">
-                    <Border.Style>
-                        <Style TargetType="Border">
-                            <Setter Property="Background" >
+                <Border x:Name="Home" Grid.Row="1" CornerRadius="10,10,10,10"  Cursor="Hand" MouseDown="Border_MouseDown_4" Margin="7,10,122,0" Background="#FF260D78" MouseEnter="Home_MouseEnter" MouseLeave="Home_MouseLeave">
 
-                                <Setter.Value>
-                                    <SolidColorBrush Color="#FF0B0422" Opacity="0.9"/>
-                                </Setter.Value>
-                            </Setter>
-                            <Setter Property="Margin" Value="12,10,128,0"/>
-
-                            <Style.Triggers>
-                                <Trigger Property="IsMouseOver" Value="True">
-                                    <Setter Property="Background" >
-                                        <Setter.Value>
-                                            <SolidColorBrush Color="#FF130D28" Opacity="0.8"/>
-                                        </Setter.Value>
-                                    </Setter>
-
-                                </Trigger>
-                            </Style.Triggers>
-                        </Style>
-                    </Border.Style>
-                    <Grid>
+                    <Grid MouseDown="Grid_MouseDown">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="2*"/>
 
                         </Grid.ColumnDefinitions>
                         <Border Width="50" Height="50"
-                                Margin="10,0,0,0" 
+                                Margin="27,20,16,16" 
                                 >
                             <Border.Background>
                                 <ImageBrush ImageSource="/home.png"/>
@@ -111,91 +113,124 @@
                             </Border.BindingGroup>
 
                         </Border>
-                        <TextBlock Grid.Column="1"
+                        <TextBlock
                                    VerticalAlignment="Center"
                                    FontSize="35"
-                                   Text="Home" Foreground="#FF999999" Margin="10,0,0,0">
+                                   Text="Home" Foreground="White" Margin="0,0,-4,0" Grid.Column="1"/>
+                    </Grid>
 
-                        </TextBlock>
+                </Border>
+
+
+                <Border x:Name="Orderbtn"  Grid.Row="2" Margin="7,5,122,0" CornerRadius="10,10,10,10"  Height="91" VerticalAlignment="Top" Cursor="Hand" MouseDown="Border_MouseDown" Background="#CC120B2B" MouseEnter="Orderbtn_MouseEnter" MouseLeave="Orderbtn_MouseLeave">
+
+                    <Grid MouseDown="Grid_MouseDown">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="2*"/>
+
+                        </Grid.ColumnDefinitions>
+                        <Border Width="50" Height="50"
+                                Margin="22,20,21,21" 
+                                >
+                            <Border.Background>
+                                <ImageBrush ImageSource="/shopping-cart.png" />
+                            </Border.Background>
+                            <Border.BindingGroup>
+                                <BindingGroup/>
+                            </Border.BindingGroup>
+
+                        </Border>
+                        <TextBlock
+                                   VerticalAlignment="Center"
+                                   FontSize="35" Foreground="White" Text="Order" HorizontalAlignment="Left" Width="179" Grid.Column="1"/>
+                    </Grid>
+                </Border>
+                <Border x:Name="Import" Grid.Row="5" Margin="7,5,122,0" CornerRadius="10,10,10,10"  Height="91" VerticalAlignment="Top" Cursor="Hand" MouseDown="Border_MouseDown_3" Background="#CC120B2B" MouseEnter="Import_MouseEnter" MouseLeave="Import_MouseLeave">
+
+                    <Grid MouseDown="Grid_MouseDown" Margin="-3,0,0,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="2*"/>
+
+                        </Grid.ColumnDefinitions>
+                        <Border
+                                Margin="23,4,0,5" HorizontalAlignment="Left" Width="61" 
+                                >
+                            <Border.Background>
+                                <ImageBrush ImageSource="/icons8-import-96.png" />
+                            </Border.Background>
+                            <Border.BindingGroup>
+                                <BindingGroup/>
+                            </Border.BindingGroup>
+
+                        </Border>
+                        <TextBlock Grid.Column="1"
+                                   VerticalAlignment="Center"
+                                   FontSize="35" Foreground="White" Text="Import" HorizontalAlignment="Left" Width="179"/>
+                    </Grid>
+                </Border>
+                <Border x:Name="Customer" Grid.Row="4" Margin="7,5,122,0" CornerRadius="10,10,10,10"  Cursor="Hand" MouseDown="Border_MouseDown_2" Background="#CC120B2B" MouseEnter="Customer_MouseEnter" MouseLeave="Customer_MouseLeave">
+
+                    <Grid MouseDown="Grid_MouseDown">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="89*"/>
+                            <ColumnDefinition Width="80*"/>
+                            <ColumnDefinition Width="98*"/>
+
+                        </Grid.ColumnDefinitions>
+                        <Border Height="50"
+                                Margin="22,20,21,21" 
+                                >
+                            <Border.Background>
+                                <ImageBrush ImageSource="/icons8-user-manual-100.png"/>
+                            </Border.Background>
+                            <Border.BindingGroup>
+                                <BindingGroup/>
+                            </Border.BindingGroup>
+
+                        </Border>
+                        <TextBlock
+                                   VerticalAlignment="Top"
+                                   FontSize="35" Foreground="White" Text="Customer" HorizontalAlignment="Left" Width="179" Grid.ColumnSpan="2" Margin="0,20,0,0" Grid.Column="1"/>
+                    </Grid>
+
+
+
+                </Border>
+                <Border x:Name="Product" Grid.Row="3" Margin="7,5,122,0" CornerRadius="10,10,10,10" Height="91" VerticalAlignment="Top"  Cursor="Hand" MouseDown="Border_MouseDown_1" Background="#CC120B2B" MouseEnter="Product_MouseEnter" MouseLeave="Product_MouseLeave">
+
+                    <Grid MouseDown="Grid_MouseDown">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="178.667"/>
+
+                        </Grid.ColumnDefinitions>
+                        <Border
+                                Margin="15,15,17,15" RenderTransformOrigin="0.602,0.505" 
+                                >
+                            <Border.Background>
+                                <ImageBrush ImageSource="/icons8-product-96.png" />
+                            </Border.Background>
+                            <Border.BindingGroup>
+                                <BindingGroup/>
+                            </Border.BindingGroup>
+
+                        </Border>
+                        <TextBlock
+                                   VerticalAlignment="Center"
+                                   FontSize="35" Foreground="White" Text="Product" HorizontalAlignment="Center" Width="179" Grid.Column="1"/>
                     </Grid>
                 </Border>
 
-
-                <Border Grid.Row="2" Margin="12,10,128,0" CornerRadius="10,10,10,10"  Height="86" VerticalAlignment="Top" Grid.RowSpan="2" Cursor="Hand">
-                    <Border.Style>
-                        <Style TargetType="Border">
-                            <Setter Property="Background" >
-                                <Setter.Value>
-                                    <SolidColorBrush Color="#FF0B0422" Opacity="0.9"/>
-                                </Setter.Value>
-                            </Setter>
-                            <Style.Triggers>
-                                <Trigger Property="IsMouseOver" Value="True">
-                                    <Setter Property="Background" >
-                                        <Setter.Value>
-                                            <SolidColorBrush Color="#FF130D28" Opacity="0.8"/>
-                                        </Setter.Value>
-                                    </Setter>
-                                </Trigger>
-                            </Style.Triggers>
-                        </Style>
-                    </Border.Style>
-                </Border>
-                <Border Grid.Row="4" Margin="12,10,128,0" CornerRadius="10,10,10,10"  Cursor="Hand">
-                    <Border.Style>
-                        <Style TargetType="Border">
-                            <Setter Property="Background" >
-                                <Setter.Value>
-                                    <SolidColorBrush Color="#FF0B0422" Opacity="0.9"/>
-                                </Setter.Value>
-                            </Setter>
-                            <Style.Triggers>
-                                <Trigger Property="IsMouseOver" Value="True">
-                                    <Setter Property="Background" >
-                                        <Setter.Value>
-                                            <SolidColorBrush Color="#FF130D28" Opacity="0.8"/>
-                                        </Setter.Value>
-                                    </Setter>
-                                </Trigger>
-                            </Style.Triggers>
-                        </Style>
-                    </Border.Style>
-
-                </Border>
-                <Border Grid.Row="3" Margin="12,10,128,0" CornerRadius="10,10,10,10" Height="86" VerticalAlignment="Top" Grid.RowSpan="2"  Cursor="Hand">
-                    <Border.Style>
-                        <Style TargetType="Border">
-                            <Setter Property="Background" >
-                                <Setter.Value>
-                                    <SolidColorBrush Color="#FF0B0422" Opacity="0.9"/>
-                                </Setter.Value>
-                            </Setter>
-                            <Style.Triggers>
-                                <Trigger Property="IsMouseOver" Value="True">
-                                    <Setter Property="Background" >
-                                        <Setter.Value>
-                                            <SolidColorBrush Color="#FF130D28" Opacity="0.8"/>
-                                        </Setter.Value>
-                                    </Setter>
-                                </Trigger>
-                            </Style.Triggers>
-                        </Style>
-                    </Border.Style>
-                </Border>
-                <Grid Grid.Row="6">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="21*"/>
-
-                        <ColumnDefinition Width="29*"></ColumnDefinition>
-                    </Grid.ColumnDefinitions>
-                </Grid>
 
 
 
 
             </Grid>
         </Border>
-        <Border CornerRadius=" 20 20 20 20" Background="#FF0B0422" Grid.ColumnSpan="3" Grid.Column="1" HorizontalAlignment="Left" Width="983">
+
+        <Border CornerRadius=" 20 20 20 20" Background="#FF050505" Grid.ColumnSpan="3" Grid.Column="1" HorizontalAlignment="Left" Width="956" Margin="10,0,0,0">
             <Grid Margin="0,0,0,-86">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="40" />
@@ -204,19 +239,23 @@
                 <Grid Margin="0,0,0,960" Grid.RowSpan="2">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition />
-                        <ColumnDefinition Width="21"/>
-                        <ColumnDefinition Width="47" />
+                        <ColumnDefinition Width="0"/>
+                        <ColumnDefinition Width="54" />
 
                     </Grid.ColumnDefinitions>
+                    <TextBlock x:Name="Mainname" Margin="40,0,0,0" VerticalAlignment="Bottom" Text="HOME" Background="#FF050505" Foreground="White" FontSize="60" FontFamily="Bahnschrift" FontWeight="Bold" Height="72" >
+
+                    </TextBlock>
                     <Button x:Name="btnMinisize"
                             BorderThickness="0"
                             Content="-"
                             Foreground="White"
-                            FontSize="22"
+                            FontSize="40"
+                            FontWeight="Bold"
                             FontFamily="Montserrat"
                             
                             Cursor="Hand"
-                            Click="btnMinisize_Click" BorderBrush="{x:Null}" Background="{x:Null}" HorizontalAlignment="Left" Width="42" Grid.ColumnSpan="2" Margin="885,0,0,40" RenderTransformOrigin="0.5,0.5"
+                            Click="btnMinisize_Click" BorderBrush="{x:Null}" Background="{x:Null}" Margin="851,1,0,24" RenderTransformOrigin="0.5,0.5"
                             
                         >
                         <Button.RenderTransform>
@@ -234,22 +273,29 @@
                             
                             Content="x"
                             Foreground="Red"
-                            FontSize="22"
+                            FontSize="30"
+
                             FontFamily="Montserrat"
-                            Grid.Column="1"
                             
                             Cursor="Hand"
-                            Click="btnDelete_Click" Height="40" VerticalAlignment="Top" OpacityMask="Red" BorderBrush="Red" Grid.ColumnSpan="2" Margin="11,0,10,0"
+                            Click="btnDelete_Click" Height="57" VerticalAlignment="Top" OpacityMask="Red" BorderBrush="Red" Margin="1,0,0,0" Grid.Column="2"
                            
                         >
                         <Button.Resources>
                             <Style TargetType="{x:Type Border}">
-                                <Setter Property="CornerRadius" Value="0, 7 ,0 ,0"/>
+                                <Setter Property="CornerRadius" Value="0, 15 ,0 ,0"/>
                             </Style>
                         </Button.Resources>
 
                     </Button>
                 </Grid>
+                <Border Grid.Row="1" Margin ="12,79,12,99" CornerRadius="20">
+                    <ContentControl Grid.Row="1" Content="{Binding}" Margin="-11,-50,-5,42">
+
+                    </ContentControl>
+
+                </Border>
+
             </Grid>
         </Border>
     </Grid>

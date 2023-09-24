@@ -19,15 +19,18 @@ namespace login_screen
     /// </summary>
     public partial class exit : Window
     {
-        public exit()
+        public exit(MainView a)
         {
             InitializeComponent();
-        }
 
+
+        }
+        
         private void TextBlock_MouseDown(object sender, MouseButtonEventArgs e)
         {
+          
               
-
+            this.Close(); 
         }
     }
 }

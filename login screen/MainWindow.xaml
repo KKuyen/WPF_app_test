@@ -20,13 +20,13 @@
             </Border.Background>
 
         </Border>
-        <Border CornerRadius=" 0 10 10 0" Background="#FFFFFF" Margin="385,0,0,48" Grid.ColumnSpan="2">
+        <Border CornerRadius=" 0 7 7 0" Background="#FFFFFF" Margin="385,0,0,48" Grid.ColumnSpan="2">
             <Grid Margin="0,0,0,-86">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="30"/>
                     <RowDefinition Height="1000"/>
                 </Grid.RowDefinitions>
-                <Grid>
+                <Grid Margin="0,0,0,981" Grid.RowSpan="2">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition />
                         <ColumnDefinition Width="25"/>
@@ -37,11 +37,11 @@
                             BorderThickness="0"
                             Content="-"
                             Foreground="Black"
-                            FontSize="20"
+                            FontSize="40"
                             FontFamily="Montserrat"
-                            
+                            FontWeight="Bold"
                             Cursor="Hand"
-                            Click="btnMinisize_Click" BorderBrush="{x:Null}" Background="{x:Null}" Grid.ColumnSpan="2" Margin="513,0,12,0"
+                            Click="btnMinisize_Click" BorderBrush="{x:Null}" Background="{x:Null}" Margin="491,0,20,0" Grid.ColumnSpan="2"
                             
                         />
                     <Button x:Name="btnDelete"
@@ -50,12 +50,12 @@
                             
                             Content="x"
                             Foreground="Red"
-                            FontSize="20"
+                            FontSize="30"
                             FontFamily="Montserrat"
                             Grid.Column="1"
-                            
+                            FontWeight="DemiBold"
                             Cursor="Hand"
-                            Click="btnDelete_Click" Height="30" VerticalAlignment="Center" OpacityMask="Red" BorderBrush="Red" Grid.ColumnSpan="2" Margin="15,0,0,0"
+                            Click="btnDelete_Click" Height="49" VerticalAlignment="Center" OpacityMask="Red" BorderBrush="Red" Grid.ColumnSpan="2" Margin="5,0,0,0"
                            
                         >
                         <Button.Resources>
@@ -77,8 +77,8 @@
 
                         </Border>
                         <TextBlock x:Name="Notification" Margin="0,25,0,0" Height="31" Text="Hello!Welcome back" FontSize="30" TextAlignment="Center" FontFamily="Bahnschrift" Foreground="#FF2F1C6A" Width="586"/>
-                        <TextBlock Height="30" Margin="50,10,50,0" Text="Email"   FontSize="22" FontFamily="Bahnschrift" Foreground="Black"/>
-                        <Border Margin="50,0,50,0" Height="50" Background="#FFCCC9C9" CornerRadius="5,5,5,5" >
+                        <TextBlock Height="30" Margin="50,10,50,0" Text="Email"   FontSize="22" FontFamily="Bahnschrift" Foreground="#FF1F1F1F"/>
+                        <Border x:Name="Emailb"  Margin="50,0,50,0" Height="50" CornerRadius="5,5,5,5" Background="#FFCCC9C9" BorderThickness="1.2,1.2,1.2,1.2" >
                             <Grid>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="26*" />
@@ -93,12 +93,12 @@
                                 </Border>
                                 <TextBox x:Name="txt_email"  Grid.Column="2" Background="Transparent" 
                                   Margin="10,0,10,0"  VerticalAlignment="Center" FontFamily="Bahnschrift" 
-                                         FontSize="20" BorderBrush="{x:Null}" Cursor="Hand" Grid.ColumnSpan="3"/>
+                                         FontSize="20" BorderBrush="{x:Null}" Cursor="Hand" Grid.ColumnSpan="3" />
                             </Grid>
 
                         </Border>
                         <TextBlock Height="30" Margin="50,20,50,0" Text="Password"   FontSize="22" FontFamily="Bahnschrift" Foreground="Black"></TextBlock>
-                        <Border Margin="50,0,50,0" Height="50" Background="#FFCCC9C9" CornerRadius="5,5,5,5" >
+                        <Border Margin="50,0,50,0" Height="50" Background="#FFCCC9C9" CornerRadius="5,5,5,5" BorderThickness="1.2,2,1.2,0" >
                             <Grid>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="45*" />
@@ -141,7 +141,7 @@
                                     <ColumnDefinition Width="4*"/>
 
                                 </Grid.ColumnDefinitions>
-                                <CheckBox Checked="CheckBox_Checked" VerticalAlignment="Center"/>
+                                <CheckBox Checked="CheckBox_Checked" VerticalAlignment="Center" IsTabStop="False"/>
                                 <TextBlock Text="Remember me" FontSize="17" 
                                            Grid.Column="1" RenderTransformOrigin="0.58,0.514" Margin="0,0,16,3"/>
                                 <TextBlock x:Name="fgtxt" Text="Forgot Password" FontSize="17" VerticalAlignment="Top" HorizontalAlignment="Right"        
@@ -178,7 +178,7 @@
                                 <TextBlock Text="Don't have an account ? " FontSize="20" VerticalAlignment="Top" HorizontalAlignment="Right"
                                            Grid.Column="0"/>
                                 <TextBlock x:Name="signup" Text="Sign up" FontSize="20" 
-                                           Grid.Column ="1" Cursor="Hand" Margin="0,0,0,-1" FontWeight="Bold">
+                                           Grid.Column ="1" Cursor="Hand" Margin="0,0,0,-1" FontWeight="Bold" MouseDown="signup_MouseDown">
                                     <TextBlock.Style>
                                         <Style TargetType="TextBlock">
                                             <Setter Property="Foreground" Value="#FF2A0985" />

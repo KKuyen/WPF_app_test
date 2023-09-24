@@ -1,4 +1,5 @@
-﻿using System;
+﻿using login_screen.Views;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -143,6 +144,23 @@ namespace login_screen
 
 
             }    
+        }
+
+        private void Border_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void txt_email_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void signup_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            SignUp su = new SignUp();
+            su.ShowDialog();
+
         }
     }
 }

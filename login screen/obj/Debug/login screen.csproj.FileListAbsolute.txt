@@ -18,3 +18,12 @@ D:\code\login screen\login screen\obj\Debug\MainView.g.cs
 D:\code\login screen\login screen\obj\Debug\MainView.baml
 D:\code\login screen\login screen\obj\Debug\exit.g.cs
 D:\code\login screen\login screen\obj\Debug\exit.baml
+D:\code\login screen\login screen\obj\Debug\Views\Menu.g.cs
+D:\code\login screen\login screen\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\code\login screen\login screen\obj\Debug\Views\Menu.baml
+D:\code\login screen\login screen\obj\Debug\Views\Information.g.cs
+D:\code\login screen\login screen\obj\Debug\Views\Information.baml
+D:\code\login screen\login screen\obj\Debug\Views\Order.g.cs
+D:\code\login screen\login screen\obj\Debug\Views\Order.baml
+D:\code\login screen\login screen\obj\Debug\Views\SignUp.g.cs
+D:\code\login screen\login screen\obj\Debug\Views\SignUp.baml
