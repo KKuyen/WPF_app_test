@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -23,13 +24,14 @@ namespace login_screen.Views
     public partial class SignUp : Window
     {
         Image early = new Image();
+        Border a = new Border();
         public SignUp()
         {
             InitializeComponent();
             early.Source = avt.ImageSource;
             lastgrid.Height = 70;
             lastgrid.VerticalAlignment = VerticalAlignment.Top;
-
+            a.Background = signUpbutton.Background;
         }
 
         private void btnDelete_Click(object sender, RoutedEventArgs e)
@@ -233,8 +235,8 @@ namespace login_screen.Views
         }
 
         private void Border_MouseDown_2(object sender, MouseButtonEventArgs e)
-
-        {
+        { 
+           
             bdName.BorderThickness=new Thickness(0,0,0,0);
             bdEmail.BorderThickness = new Thickness(0, 0, 0, 0);
             bdPhone.BorderThickness = new Thickness(0, 0, 0, 0);
@@ -243,19 +245,6 @@ namespace login_screen.Views
             bdDate.BorderThickness = new Thickness(0, 0, 0, 0);
             bdPos.BorderThickness = new Thickness(0, 0, 0, 0);
             bdws.BorderThickness = new Thickness(0, 0, 0, 0);
-
-            er1.Text = "";
-            er2.Text = "";
-            er3.Text = "";
-            er4.Text = "";
-            er5.Text = "";
-            er6.Text = "";
-                 er7.Text = "";
-            er8.Text = "";
-            er9.Text = "";
-            er10.Text = "";
-
-
             TextBlock[] arr=new TextBlock[20];
             int ersum = 0;
             arr[0] = er1;
@@ -268,7 +257,12 @@ namespace login_screen.Views
             arr[7] = er8;   
                 arr[8] = er9;
             arr[9] = er10;
-
+            for (int i = 0; i < 10; i++)
+            {
+                arr[i].Visibility = Visibility.Collapsed;
+                arr[i].Text = "";
+                
+            }
             string[] str = new string[20];
             bool dk = false;
             TextBlock[] res=new TextBlock[20];
@@ -313,7 +307,7 @@ namespace login_screen.Views
             if (rpass.Password=="")
             {
                 ersum++;
-                str[ersum - 1] = "Please enter the Repeat Password";
+                str[ersum - 1] = "*Please enter the Repeat Password";
                 res[ersum - 1] = er5;
                 bdrpass.BorderThickness = new Thickness(2, 2, 2, 2);
                 bdrpass.BorderBrush = System.Windows.Media.Brushes.Red;
@@ -372,6 +366,7 @@ namespace login_screen.Views
          
           for(int i=0;i<ersum;i++)
             {
+                arr[i].Visibility=Visibility.Visible;
                 arr[i].Text = str[i];
                 }
             //điều kiện để đăng ký thành công
@@ -396,7 +391,9 @@ namespace login_screen.Views
             if (dk == false)
             {
                 lastgrid.Height = 180;
-            }
+                SystemSounds.Beep.Play();
+
+            }    
             else
             {
                 this.Close();
@@ -579,6 +576,18 @@ namespace login_screen.Views
             }
         old= phone.Text;    
 
+        }
+
+    
+        
+        private void signUpbutton_MouseEnter(object sender, MouseEventArgs e)
+        {
+            signUpbutton.Background = new SolidColorBrush(Colors.MediumPurple);
+        }
+
+        private void signUpbutton_MouseLeave(object sender, MouseEventArgs e)
+        {
+            signUpbutton.Background = a.Background;
         }
     }
      

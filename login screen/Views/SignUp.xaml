@@ -523,22 +523,22 @@
                         </RowDefinition>
                     </Grid.RowDefinitions>
 
-                    <Border Cursor="Hand" CornerRadius="7" Background="#FF342369" MouseDown="Border_MouseDown_2" Margin="252,0,253,16" Grid.Row="1">
+                    <Border x:Name="signUpbutton" Cursor="Hand" CornerRadius="7" Background="#FF342369" MouseDown="Border_MouseDown_2" Margin="252,0,253,16" Grid.Row="1" MouseEnter="signUpbutton_MouseEnter" MouseLeave="signUpbutton_MouseLeave">
                         <TextBlock Text="Sign Up" FontSize="25" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="SemiBold" FontFamily="Bahnschrift"/>
                     </Border>
                     <Border Background="Transparent" Margin="30,28,30,15" CornerRadius="7" BorderThickness="2" BorderBrush="Red">
                         <ScrollViewer Margin="8,15,8,8">
                             <StackPanel>
-                                <TextBlock  Height="30" x:Name="er1" Foreground="Red" FontFamily="Bahnschrift" FontSize="20" FontWeight="SemiBold" Width="594" />
-                                <TextBlock  Height="30" x:Name="er2" Foreground="Red" FontFamily="Bahnschrift" FontSize="20" FontWeight="SemiBold" Width="594" />
-                                <TextBlock  Height="30" x:Name="er3"  Foreground="Red" FontFamily="Bahnschrift" FontSize="20" FontWeight="SemiBold" Width="594" />
-                                <TextBlock  Height="30" x:Name="er4"  Foreground="Red" FontFamily="Bahnschrift" FontSize="20" FontWeight="SemiBold" Width="594" />
-                                <TextBlock  Height="30" x:Name="er5" Foreground="Red" FontFamily="Bahnschrift" FontSize="20" FontWeight="SemiBold" Width="594" />
-                                <TextBlock  Height="30" x:Name="er6" Foreground="Red" FontFamily="Bahnschrift" FontSize="20" FontWeight="SemiBold" Width="594" />
-                                <TextBlock  Height="30" x:Name="er7" Foreground="Red" FontFamily="Bahnschrift" FontSize="20" FontWeight="SemiBold" Width="594" />
-                                <TextBlock  Height="30" x:Name="er8" Foreground="Red" FontFamily="Bahnschrift" FontSize="20" FontWeight="SemiBold" Width="594" />
-                                <TextBlock  Height="30" x:Name="er9" Foreground="Red" FontFamily="Bahnschrift" FontSize="20" FontWeight="SemiBold" Width="594" />
-                                <TextBlock  Height="30" x:Name="er10" Foreground="Red" FontFamily="Bahnschrift" FontSize="20" FontWeight="SemiBold" Width="594" />
+                                <TextBlock Visibility="Collapsed"  Height="30" x:Name="er1" Foreground="Red" FontFamily="Bahnschrift" FontSize="20" FontWeight="SemiBold" Width="594" />
+                                <TextBlock Visibility="Collapsed"  Height="30" x:Name="er2" Foreground="Red" FontFamily="Bahnschrift" FontSize="20" FontWeight="SemiBold" Width="594" />
+                                <TextBlock Visibility="Collapsed"  Height="30" x:Name="er3"  Foreground="Red" FontFamily="Bahnschrift" FontSize="20" FontWeight="SemiBold" Width="594" />
+                                <TextBlock Visibility="Collapsed"  Height="30" x:Name="er4"  Foreground="Red" FontFamily="Bahnschrift" FontSize="20" FontWeight="SemiBold" Width="594" />
+                                <TextBlock Visibility="Collapsed"  Height="30" x:Name="er5" Foreground="Red" FontFamily="Bahnschrift" FontSize="20" FontWeight="SemiBold" Width="594" />
+                                <TextBlock Visibility="Collapsed"  Height="30" x:Name="er6" Foreground="Red" FontFamily="Bahnschrift" FontSize="20" FontWeight="SemiBold" Width="594" />
+                                <TextBlock Visibility="Collapsed"  Height="30" x:Name="er7" Foreground="Red" FontFamily="Bahnschrift" FontSize="20" FontWeight="SemiBold" Width="594" />
+                                <TextBlock Visibility="Collapsed"  Height="30" x:Name="er8" Foreground="Red" FontFamily="Bahnschrift" FontSize="20" FontWeight="SemiBold" Width="594" />
+                                <TextBlock Visibility="Collapsed"  Height="30" x:Name="er9" Foreground="Red" FontFamily="Bahnschrift" FontSize="20" FontWeight="SemiBold" Width="594" />
+                                <TextBlock Visibility="Collapsed"  Height="30" x:Name="er10" Foreground="Red" FontFamily="Bahnschrift" FontSize="20" FontWeight="SemiBold" Width="594" />
 
 
 
