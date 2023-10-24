@@ -80,16 +80,17 @@
 
                         <Grid Background="Transparent" Margin="0,0,0,0">
                             <Grid.RowDefinitions >
-                                <RowDefinition Height="1*"/>
-                                <RowDefinition Height="1.4*"/>
+                                <RowDefinition Height="32*"/>
+                                <RowDefinition Height="45*"/>
 
 
 
-                                <RowDefinition Height="1*"/>
-                                <RowDefinition Height="1.4*"/>
+                                <RowDefinition Height="32*"/>
+                                <RowDefinition Height="45*"/>
 
-                                <RowDefinition Height="1*"/>
-                                <RowDefinition Height="1.4*"/>
+                                <RowDefinition Height="32*"/>
+                                <RowDefinition Height="33*"/>
+                                <RowDefinition Height="12*"/>
 
 
 
@@ -98,7 +99,7 @@
                             <TextBlock  Text="*Name" FontSize="20" FontWeight="SemiBold" FontFamily="Bahnschrift" VerticalAlignment="Top" Margin="0,8,0,0" >
 
                             </TextBlock>
-                            <Border x:Name="bdName" VerticalAlignment="Top" Grid.Row="1" CornerRadius="4" Background="White" Height="37">
+                            <Border x:Name="bdName" VerticalAlignment="Top" CornerRadius="4" Background="White" Height="37" Margin="0,32,0,0" Grid.RowSpan="2">
                                 <TextBox x:Name="name" Foreground="#FF403F3F" VerticalAlignment="Center" FontSize="20" FontFamily="Bahnschrift" Height="34" Margin="3,0,3,0" VerticalContentAlignment="Center"/>
                             </Border>
                             <TextBlock Grid.Row="2" Text="*Email" FontSize="20" FontWeight="SemiBold" FontFamily="Bahnschrift" VerticalAlignment="Center" >
@@ -108,7 +109,7 @@
                                 <TextBox  x:Name="email" Foreground="#FF403F3F" VerticalAlignment="Center" FontSize="20" FontFamily="Bahnschrift" Height="33" Margin="3,0,3,0" VerticalContentAlignment="Center"/>
                             </Border>
                             <TextBlock Grid.Row="4" Text="*Phone Number" FontSize="20" FontWeight="SemiBold" FontFamily="Bahnschrift" VerticalAlignment="Center" />
-                            <Border x:Name="bdPhone" Grid.Row="6" VerticalAlignment="Top"  CornerRadius="4" Background="White" Height="37">
+                            <Border x:Name="bdPhone" Grid.Row="5" VerticalAlignment="Top"  CornerRadius="4" Background="White" Height="37" Grid.RowSpan="2">
                                 <TextBox Text="{Binding PhoneNumber, StringFormat={}{0:(###)###-####}}"  x:Name="phone" Foreground="#FF403F3F" VerticalAlignment="Center" FontSize="20" FontFamily="Bahnschrift" Height="33" Margin="3,0,3,0" PreviewKeyDown="TextBox_PreviewKeyDown" VerticalContentAlignment="Center" TextChanged="phone_TextChanged">
 
                                 </TextBox>
@@ -419,7 +420,7 @@
                                         <ContentControl VerticalAlignment="Center" VerticalContentAlignment="Center">
                                             
                                         </ContentControl>
-                                     
+
 
                                     </TextBlock>
                                     <Menu Grid.Column="1" HorizontalAlignment="Left" Margin="0,3,0,3" Width="34">
